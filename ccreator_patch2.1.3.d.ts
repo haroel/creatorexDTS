@@ -41,7 +41,7 @@ declare module cc {
              * Gets an item from the JS.
              * @param lskey 
              */
-            getItem ( lskey:string ):string;
+            getItem : ( lskey:string )=> string;
             /** Sets an item in the JS. */
             setItem: (key:string,value:string)=>void;
             /** removes an item from the LS */
