@@ -41,7 +41,7 @@ declare module cc {
              * Gets an item from the JS.
              * @param lskey 
              */
-            getItem : ( lskey:string )=> string;
+            getItem ( lskey:string ):string;
             /** Sets an item in the JS. */
             setItem: (key:string,value:string)=>void;
             /** removes an item from the LS */
@@ -57,14 +57,22 @@ declare module cc {
 }
 
 declare namespace jsb{
-
+    export module reflection{
+        /**
+         * https://docs.cocos.com/creator/manual/zh/advanced-topics/java-reflection.html
+         * call OBJC/Java static methods
+         * 
+         * @param args 
+         */
+        export function callStaticMethod(...args):any;
+    }
     /**
      * 下载任务对象
      */
     export type DownloaderTask = {requestURL:string,storagePath:string,identifier:string};
 
     /**
-     * jsb 文件http下载类
+     * Http file downloader for jsb！
      */
     export class Downloader{
         /**
