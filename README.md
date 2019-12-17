@@ -1,7 +1,7 @@
 # creatorexDTS
 Cocos Creator d.ts 
 
-官方cocos creator TS版本的 creator.d.ts文件缺失很多信息，特别jsb模式，很多API接口调用起来要么凭经验要么要去查c++接口，使用其他非常不便。
+官方cocos creator TS版本的 creator.d.ts文件缺失很多信息，特别jsb模块，很多API接口调用起来要么凭经验要么要去查c++接口，使用不方便。
 本项目主要用于针对creator.d.ts的扩展，也非常期待广大开发者一起维护或者提PR. :)
 
 1. 如果你不还不懂d.ts是什么，你可能需要去了解一下 https://www.tslang.cn/docs/handbook/declaration-files/library-structures.html
