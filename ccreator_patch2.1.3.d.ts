@@ -6,6 +6,9 @@
  */
 
 declare module cc {	
+    /**
+     * Material
+     */
     export interface Material extends Asset {	
         /**
          * set Property value to Material
@@ -13,14 +16,32 @@ declare module cc {
          * @param value 
          */
         setProperty: (name:string,value:any)=> void;
+
+        getProperty: (name:string)=>any;
+        
+        define: (name:string,val:any,force:boolean)=>void;
+
+        getDefine:(name:string)=>any;
+
+        setDirty:(dirty:boolean)=>void;
+
+        /**
+         * 
+         */
+        getHash:()=>string;
+        /**
+         * copy
+         */
+        copy:()=>cc.Material;
     }	
-    export namespace sys {	    
-         let localStorage:{
+
+    export namespace sys {	  
+        let localStorage:{ 
             /**
              * Gets an item from the JS.
              * @param lskey 
              */
-            getItem: ( lskey:string )=>string;
+            getItem ( lskey:string ):string;
             /** Sets an item in the JS. */
             setItem: (key:string,value:string)=>void;
             /** removes an item from the LS */
@@ -37,6 +58,31 @@ declare module cc {
 
 declare namespace jsb{
 
+    /**
+     * 下载任务对象
+     */
+    export type DownloaderTask = {requestURL:string,storagePath:string,identifier:string};
+
+    /**
+     * jsb 文件http下载类
+     */
+    export class Downloader{
+        /**
+         * create a download task
+         * @param url 
+         * @param storagePath 
+         * @param identifier 
+         */
+        createDownloadFileTask(url:string,storagePath:string,identifier?:string):DownloaderTask;
+
+        setOnFileTaskSuccess(task:DownloaderTask):void;
+
+        setOnTaskProgress(task:DownloaderTask,bytesReceived:number,totalBytesReceived:number, totalBytesExpected:number):void;
+
+        setOnTaskError(task:DownloaderTask, errorCode, errorCodeInternal, errorStr):void;
+
+    }
+    
     /**
      * FileUtils  Helper class to handle file operations.
      */
