@@ -1,3 +1,4 @@
+
 /**
  * 2019/12/03
  * author:  ihowe
@@ -523,17 +524,17 @@ declare namespace jsb {
      */
     //jsb.EventAssetsManager = cc.Class.extend(/** @lends jsb.EventAssetsManager# */{
     export class EventAssetsManager extends cc.Class {
-        static ERROR_NO_LOCAL_MANIFEST = 0;
-        static ERROR_DOWNLOAD_MANIFEST = 1;
-        static ERROR_PARSE_MANIFEST = 2;
-        static NEW_VERSION_FOUND = 3;
-        static ALREADY_UP_TO_DATE = 4;
-        static UPDATE_PROGRESSION = 5;
-        static ASSET_UPDATED = 6;
-        static ERROR_UPDATING = 7;
-        static UPDATE_FINISHED = 8;
-        static UPDATE_FAILED = 9;
-        static ERROR_DECOMPRESS = 10;
+        static ERROR_NO_LOCAL_MANIFEST = EventCode.ERROR_NO_LOCAL_MANIFEST;
+        static ERROR_DOWNLOAD_MANIFEST = EventCode.ERROR_DOWNLOAD_MANIFEST;
+        static ERROR_PARSE_MANIFEST = EventCode.ERROR_PARSE_MANIFEST;
+        static NEW_VERSION_FOUND = EventCode.NEW_VERSION_FOUND;
+        static ALREADY_UP_TO_DATE = EventCode.ALREADY_UP_TO_DATE;
+        static UPDATE_PROGRESSION = EventCode.UPDATE_PROGRESSION;
+        static ASSET_UPDATED = EventCode.ASSET_UPDATED;
+        static ERROR_UPDATING = EventCode.ERROR_UPDATING;
+        static UPDATE_FINISHED = EventCode.UPDATE_FINISHED;
+        static UPDATE_FAILED = EventCode.UPDATE_FAILED;
+        static ERROR_DECOMPRESS = EventCode.ERROR_DECOMPRESS;
         /**
          * @function EventAssetsManager
          * @constructor
