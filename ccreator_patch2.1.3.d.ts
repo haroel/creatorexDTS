@@ -235,7 +235,7 @@ declare namespace jsb {
          *  @see fullPathForFilename(const char*).
          *  @lua NA
          */
-        export function getSearchPaths(filepath: string): Array<string>;
+        export function getSearchPaths(): Array<string>;
         /**
          * 
          * @param filepath 
